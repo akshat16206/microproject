@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SHAPECALCULATOR</title>
+</head>
+ <body class="bg-emerald-600" >
+        <nav class="bg-emerald-900 text-white flex justify-between">
+            <span class="text-xl flex items-center mx-3 font-bold">Shape Calculator</span>
+            <ul class="px-28 py-4 flex space-x-11 justify-end">
+                <button class="cursor-pointer">HOME</button>
+                <button class="cursor-pointer">ABOUT US</button>
+                <button class="cursor-pointer">CATALOUGE</button>
+                <button class="cursor-pointer">CONTACT US</button>
+            </ul>
+        </nav>
+    <h1 class="text-white text-7xl text-center mt-[200px] font-bold ">SHAPE CALCULATOR</h1>
+    <h2 class="text-white font-bold text-3xl text-center">Total Edge Length of Cube Calculator</h2>
+    <div class="lable flex justify-center m-[20px]">
+    <label for="side" class="font-bold text-white">Enter the side length of the cube:</label>
+    <input type="number" id="side" name="side">
+    </div>
+    <div class="lable flex justify-center">
+    <button onclick="calculateTotalEdgeLength()" class="text-emerald-800 px-2 py-1 bg-white border shadow-lg rounded-2xl hover:text-emerald-500 hover:bg-emerald-900 font-bold">Calculate Total Edge Length</button>
+    </div>
+    <div class="p flex justify-center m-[10px]">
+    <p id="result" class="font-bold text-white"></p>
+    </div>
+    <script>
+        function calculateTotalEdgeLength() {
+            const side = document.getElementById("side").value;
+            const totalEdgeLength = 12 * side;
+            document.getElementById("result").textContent = "The total edge length of the cube is: " + totalEdgeLength;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SHAPECALCULATOR</title>
+</head>
+    <body class="bg-emerald-600" >
+        <nav class="bg-emerald-900 text-white flex justify-between">
+            <span class="text-xl flex items-center mx-3 font-bold">Shape Calculator</span>
+            <ul class="px-28 py-4 flex space-x-11 justify-end">
+                <button class="cursor-pointer">HOME</button>
+                <button class="cursor-pointer">ABOUT US</button>
+                <button class="cursor-pointer">CATALOUGE</button>
+                <button class="cursor-pointer">CONTACT US</button>
+            </ul>
+        </nav>
+    <h1 class="text-white text-7xl text-center mt-[200px] m-[10px] font-bold ">SHAPE CALCULATOR</h1>
+    <h2 class="text-white font-bold text-3xl text-center">Area of Square Calculator</h2>
+    <div class="lable flex justify-center m-[20px]">
+    <label for="side" class="text-white font-bold">Enter the side of the square:</label>
+    <input type="number" id="side" name="side">
+    </div>
+    <div class="button flex justify-center">
+     <button onclick="calculateArea()" class="text-emerald-800 px-2 py-1 bg-white border shadow-lg rounded-2xl hover:text-emerald-500 hover:bg-emerald-900 font-bold ">Calculate Area</button>
+    </div>
+    <div class="p flex justify-center m-[10px]">
+    <p id="result" class="font-bold text-white"></p>
+    </div>
+    <script>
+        function calculateArea() {
+            const side = document.getElementById("side").value;
+            const area = side * side;
+            document.getElementById("result").textContent = "The area of the square is: " + area;
+        }
+    </script>
+</body>
+</html>
